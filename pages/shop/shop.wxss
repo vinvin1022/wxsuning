@@ -1,0 +1,62 @@
+/* pages/shop/shop.wxss */
+page{background-color: #f3f3f3; position: relative;}
+.placeholder{font-size: 28rpx; color: #999999}
+.search input{ width: 635rpx; height: 49rpx; position: fixed; top: 0; left: 16rpx; line-height: 49rpx;  padding: 3rpx 10rpx 3rpx 75rpx; margin: 15rpx auto; background-color: #fff;  border-radius: 10rpx; font-size: 28rpx; z-index: 4}
+.search icon{position: fixed;top: 25rpx; left: 45rpx; z-index: 5}
+
+
+
+.content{ position: relative; }
+.haveselected{padding-bottom: 100rpx;}
+.content .left{width: 200rpx; font-size: 32rpx; position: fixed; left: 0;top:86rpx;}
+.content .left .item{height: 94rpx; background-color: #f3f3f3; line-height: 94rpx;  padding-left: 20rpx;border-bottom: 1px solid #e3e3e3; position: relative;}
+.content .left .active{background-color: #fff;}
+.content .left .tips{ position: absolute; right:10rpx;top: 10rpx; width: 40rpx; height: 40rpx; text-align: center; line-height: 40rpx; color: #fff; font-size: 24rpx; border-radius: 50%; background-color: #ff900c}
+.content .right{width: 550rpx; height: 1015rpx; background-color: #fff; overflow: auto; position: absolute; left: 200rpx;top:86rpx;}
+.content .alredy{height: 915rpx!important;overflow: auto;}
+.content .right .puditem{display: flex; flex-direction: row; height: 138rpx; padding: 34rpx 24rpx; background-color: #fff; border-bottom: 1px solid #e3e3e3}
+.content .right .puditem image{width: 145rpx;height: 145rpx; margin-right: 15rpx}
+.content .right .puditem .price{ width: 342rpx; display: flex; justify-content: space-between;color: #ff390c; padding-top: 10rpx; font-size:35rpx;}
+.content .right .puditem .kzan{font-size: 24rpx; color: #999999; padding-top: 10rpx;}
+.content .right .puditem .kzan text{padding-right:15rpx;}
+
+.content .right .puditem .price text{width: 40rpx; height: 50rpx; padding:0; line-height: 50rpx; text-align: center; font-size: 30rpx;}
+.content .right .puditem .price  .btn{ text-align: center; line-height:50rpx;width:  50rpx; height: 50rpx; border-radius: 50%; background-color: #ff900c; color: #fff; font-size: 30rpx;border: 1px solid #ff900c;}
+.content .right .puditem .price  .jian{border: 1px solid #9b9b9b; background-color: #fff; color: #9b9b9b }
+
+
+.next{position: fixed;bottom: -100rpx; left: 0; display: flex;justify-content: space-between; width: 718rpx; font-size: 30rpx; background-color: #3d3d3d; color: #fff; height: 100rpx; line-height:100rpx; padding-left:32rpx; z-index: 7}
+.showcarslist{display: flex;justify-content: space-between; width: 450rpx; padding-right:100rpx;}
+.next image{width: 64rpx;height: 64rpx; padding-top: 17rpx;}
+.nextbtn{ background-color: #ff900c; height: 100rpx; line-height: 100rpx; width: 200rpx; text-align: center}
+
+
+.modelpop{ width: 100%; height: 100%; position: fixed; top: 0; left: 0;opacity: 0; background-color: rgba(0,0,0,0.5); z-index: 9}
+.popproduct{width: 650rpx; position: fixed; background-color: #fff; top: 50%; left: 50%; transform:translate(-50%,-50%); border-radius: 10rpx; z-index: 10; opacity: 0}
+.popproduct .closewrap{position: absolute; right: 0;top:0; width: 60rpx; height: 60rpx}
+.popproduct .close{width: 30rpx; height: 30rpx; margin: 15rpx 0 0 15rpx;}
+.popproduct .picwrap{display: flex; width: 650rpx; justify-content: center; align-items: center}
+.popproduct .pic{width: 600rpx; height: 480rpx; margin: 0 auto; padding-top: 84rpx;}
+.popproduct .des{display: flex; justify-content: space-between; padding: 30rpx 30rpx 20rpx;}
+.popproduct .des .left{display: flex; flex-direction: column ; height: 90rpx; line-height: 45rpx; justify-content: space-around; font-size: 35rpx;}
+.popproduct .des .left .price{color:#ff390c}
+.popproduct .des image{width:60rpx; height: 60rpx; margin-top: 15rpx;}
+.popproduct .btns{padding-right: 30rpx;}
+
+
+.addCars{ width: 280rpx; background-color: #ff900c; color: #fff; float: right; margin: 0 30rpx 30rpx 0;}
+
+
+
+
+.carslistwrap{position: fixed;bottom: -590rpx; left: 0;width: 100% ; z-index: 6 ;}
+.carslist{height: 505rpx; overflow: auto; background-color: #fff;}
+.carslist .carsitem{display: flex; justify-content: space-between; height:  100rpx; line-height: 100rpx;  border-bottom:1px solid #e3e3e3; padding:0 24rpx; font-size: 32rpx;}
+.carslist .carsitem .btns{align-items: center; padding-bottom:0}
+.carslist .carsitem .liang{ padding-left: 30rpx;}
+.carslistwrap .carstitle{height: 85rpx; line-height: 85rpx; background-color: #e3e3e3; color: #9a9a9a; font-size: 32rpx; padding: 0 24rpx;}
+.proname{display: flex;}
+.carstitle{display: flex; justify-content: space-between ;align-items: center}
+.carstitle image{width:40rpx; height: 40rpx;}
+
+.carspop{width: 100%; height: 100%; background-color: rgba(0,0,0,.5); position: fixed; bottom: -1206rpx; left: 0;z-index: 5}

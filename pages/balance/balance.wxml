@@ -1,0 +1,65 @@
+<view class='addresswrap'>
+<view class='address'>
+  <view class='additem newaddress'>
+    <view class='addtext'>
+      <image class='addimg' src='/images/settlement_ic_location.png'></image>
+      <view class='addresstext'>
+        <view>新增收货地址</view>
+        <view class='conctic'>林大作 哈哈哈哈</view>
+       </view>
+    </view>
+     <image class='righticon' src='/images/righticon.png'></image>
+  </view>
+
+  <view class='additem send'>
+    <view class='addtext'>
+      <image class='addimg' src='/images/settlement_ic_time.png'></image>
+      <text>立即发送</text>
+    </view>
+     <image class='righticon' src='/images/righticon.png'></image>
+  </view>
+</view>
+
+  <scroll-view scroll-y="true" style="height: 800rpx;">
+  <view class='productlist'>
+    <view class='title'>Moe宅 中粮商务公园</view>
+
+  
+
+    <view class='proitem' wx:for="{{product}}" wx:key="pk" wx:for-index="pindex" wx:for-item="pitem">
+    <image src='{{pitem.imgurl}}'></image>
+    <view class='detaildes'  style='flex-grow:'>
+      <text class='protitle'>{{pitem.title}}</text>
+      <text class='num'>x {{pitem.num}}</text>     
+    </view>
+    <text class='price'>￥{{pitem.price*pitem.num}}</text>
+  </view>
+   
+</view>
+
+<view class='psend'>
+  <text>配送费</text>
+  <text class='prica'>￥{{expressfee}}</text>
+</view>
+<view class='psend sendmoney'>
+  <view class='quandec'>
+    <view>宅优费</view>
+    <view class='maxquan'>自动选择最大的优惠券</view>
+  </view>
+  <view>
+    <text class='prica'>-￥{{discount}}</text>
+    <image src='/images/righticon.png'></image>
+  </view>
+</view>
+
+  <view class='allprice'>
+    <text class='yhmoney'>已经优惠￥{{discount}}</text>
+    合计
+    <text class='counter'>￥{{allprice}}</text>
+  </view>
+   </scroll-view>
+</view>
+
+<view class="paysend">
+  <button type="primary"><image src='/images/logo_wechat.png'></image>微信支付 ￥{{allprice}}</button>
+</view>

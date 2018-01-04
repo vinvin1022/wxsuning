@@ -1,0 +1,39 @@
+/* pages/balance/balance.wxss */
+page{background-color: #f3f3f3}
+
+.address{padding-left:24rpx; background-color:#fff; margin-bottom:25rpx;}
+.righticon{width:12rpx; height: 24rpx;}
+.address .additem{ display: flex; justify-content: space-between; align-items: center; padding: 0 20rpx 0 40rpx; font-size:36rpx;}
+.address .addtext{display: flex ;justify-content: space-between; align-items: center}
+.addresstext{padding-left:44rpx;}
+.addresstext .conctic{color:#999999; font-size:30rpx;}
+.address .addtext text{padding-left:44rpx;}
+.address .addimg{width:28rpx;height:38rpx;}
+.newaddress{height: 132rpx; border-bottom:1px solid #e3e3e3;}
+.send{height: 100rpx;}
+.send .addimg{width: 34rpx; height: 34rpx;}
+
+
+.productlist{ background-color:#fff;padding:0 20rpx; }
+.productlist .title{font-size: 36rpx; height: 94rpx; line-height: 94rpx;}
+.productlist .proitem{ display:flex; align-items: center; justify-content: space-between; height: 130rpx; padding:0 15rpx; background-color: #f9f9f9; margin-bottom:15rpx;}
+.productlist .proitem .num{color:#999}
+.productlist .proitem:last-child{margin-bottom:0}
+.productlist .proitem image{width: 95rpx; height: 95rpx;}
+.productlist .proitem .detaildes{flex-grow:4; display: flex; justify-content: flex-start ; flex-direction: column; padding-left:15rpx; font-size: 32rpx;}
+.productlist .proitem .detaildes text{line-height: 40rpx; }
+.productlist .proitem .price{flex-grow:1; text-align: right}
+
+.psend{ display: flex; justify-content: space-between; height: 94rpx; line-height: 94rpx; padding: 0 30rpx; background-color: #fff; font-size: 32rpx;}
+.psend .prica{color:#ff390c}
+.psend image{width: 12rpx; height: 24rpx; margin-left: 15rpx;}
+
+.sendmoney .quandec{ line-height: 40rpx;}
+.sendmoney .quandec .maxquan{ font-size: 30rpx; color: #999}
+.allprice{ text-align: right; font-size: 40rpx; height: 94rpx; line-height: 94rpx; padding: 0 30rpx; background-color: #fff; border-top:1px solid #e3e3e3;}
+.allprice .counter{color:#ff390c}
+.allprice .yhmoney{font-size: 30rpx; color: #999}
+/* .paysend{ position: fixed; bottom:0; left: 0; width: 100%; } */
+.paysend button{margin: 20rpx 50rpx; background-color: #ff900c; border: none; font-size: 36rpx;}
+.paysend image{width: 40rpx; height: 32rpx; padding-right:35rpx;}
+.paysend .button-hover{ background-color: #ff900c;}

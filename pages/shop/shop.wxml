@@ -1,0 +1,108 @@
+<view class="search">
+  <input type='text' placeholder='搜索你想要的商品' placeholder-class='placeholder' />
+  <icon type="search" size='18' />
+</view>
+
+<view class='content {{allPrice>0 ? "haveselected":""}}'>
+  <view class='left'>
+    <block wx:for="{{catagery}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+      <view class="item {{item.id == customid ? 'active':''}}" data-cid='{{item.id}}' bindtap='selectProduct'>
+        <text>{{item.name}}</text>
+        <text class='tips' wx:if="{{item.num}}">{{item.num}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='right {{allPrice>0 ? "alredy" : ""}}'>
+     <block wx:for="{{products}}"  wx:key="pudidx" wx:for-index="pudidx" wx:for-item="puditem">
+      <view class='puditem' wx:if='{{puditem.cid == customid}}' data-product='{{puditem}}'>
+        <image  catchtap='godetail' data-product='{{puditem}}' src="{{puditem.imgurl}}"></image>
+        <view class="pudtitle">
+          <text catchtap='godetail' data-product='{{puditem}}'>{{puditem.title}}</text>
+          <view catchtap='godetail' data-product='{{puditem}}' class='kzan'>
+            <text>库存45</text>
+            <text wx:if="{{puditem.like}}">赞{{puditem.like}}</text>
+          </view>
+          <view class='price'>
+            <text>￥{{puditem.price}}</text>
+            <view class='btns commonbtns'>
+              <view class='btn jian' catchtap='jianPro' data-product='{{puditem}}' wx:if="{{puditem.num>0}}">-</view>
+              <text wx:if="{{puditem.num>0}}" type='number'>{{puditem.num}}</text>
+              <view class='btn' data-product='{{puditem}}' catchtap='addPro'>+</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </block>
+    <view class='puditem' wx:if='{{!hasproduct}}'>尽情期待，马上上架</view>
+  </view>
+ 
+</view>
+ <view class='next' animation="{{animationshowcarsall}}">
+    <view class='showcarslist' catchtap='showcarslist'>
+      <image src='/images/staticcar.png'></image>
+      <text>共{{counter}}件</text>
+      <text>总价：￥{{allPrice}}元</text>
+    </view>
+    <text class='nextbtn' catchtap='nexttap'>下一步</text>
+    <!-- <navigator class='nextbtn' url='/pages/balance/balance?carsproduct={{carsproduct}}'>下一步</navigator> -->
+  </view>
+
+
+<view class='detailpop modelpop' animation="{{animationshowdetails}}" wx:if="{{ispopShow}}" catchtap='hidepop'>
+</view>
+  <view class='popproduct' animation="{{animationshowdetails}}"  wx:if="{{ispopShow}}">
+    <view class='closewrap' catchtap='hidepop'>
+      <image class='close' src='/images/pop_ic_close.png'></image>
+    </view>
+    
+    <view class='picwrap'>
+     <image class='pic' src='{{productdetail.imgurl}}'></image>
+    </view>
+   
+    <view class='des'>
+      <view class='left'>
+        <view class='tit'>
+          {{productdetail.title}}
+        </view>
+        <view class='price'>
+          ￥ {{productdetail.price}}
+        </view>
+      </view>
+      <image wx:if="{{!islike}}" catchtap='zanlike' class='right' src='/images/pop_ic_like_dis.png'></image>
+      <image wx:if="{{islike}}" catchtap='zanlike' class='right' src='/images/pop_ic_like_sel.png'></image>
+      
+    </view>
+
+
+    <view class='btns commonbtns'>
+      <view class='btn jian' wx:if="{{productdetail.num>0}}" catchtap='jianCars' data-product='{{productdetail}}'>-</view>
+      <text type='number' wx:if="{{productdetail.num>0}}">{{productdetail.num}}</text>
+      <view class='btn' data-product='{{productdetail}}' catchtap='addCars'>+</view>
+    </view>
+    <button class='addCars' wx:if="{{productdetail.num>0}}" catchtap="finalAddCars">加入购物车</button>
+  </view>
+
+
+<view class='carspop'  animation="{{animationshowcarslist}}"></view>
+<view class='carslistwrap' animation="{{animationshowcarslist}}">
+
+  <view class='carstitle'>
+    <text catchtap='clearcars'>清空购物车</text>
+    <image src='/images/shopping-cart_ic_close.png' catchtap='closecarslist'> </image>
+  </view>
+  <view class='carslist'>
+    <view class='carsitem' wx:if="{{citem.num}}" wx:for='{{carsproduct}}' wx:key="cit" wx:for-index="cindex" wx:for-item="citem">
+      <view class='proname'>
+        <text class='name'>{{citem.title}}</text>
+        <text class='liang'>￥{{citem.price}}</text>
+      </view>
+      <view class='btns commonbtns'>
+        <view class='btn jian' catchtap='jianPro' data-product='{{citem}}'>-</view>
+        <text type='number'>{{citem.num}}</text>
+        <view class='btn' data-product='{{citem}}' catchtap='addPro'>+</view>
+      </view>
+    </view> 
+  </view>
+ 
+</view>

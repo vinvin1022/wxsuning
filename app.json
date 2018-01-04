@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/shop/shop",
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/balance/balance"    
+
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#ff900c",
+    "list": [{
+      "pagePath": "pages/shop/shop",
+      "text": "商品选购",
+      "iconPath": "/images/tab_ic_shop_nor.png",
+      "selectedIconPath": "/images/tab_ic_shop_sel.png"
+    },{
+      "pagePath": "pages/order/order",
+      "text": "历史订单",
+      "iconPath": "/images/tab_ic_order_nor.png",
+      "selectedIconPath": "/images/tab_ic_order_sel.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "个人中心",
+      "iconPath": "/images/tab_ic_mine_nor.png",
+      "selectedIconPath": "/images/tab_ic_mine_sel.png"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle":"#fff",
+    "navigationBarTitleText":"中粮商务公园店"
+  }
+}
