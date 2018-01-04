@@ -1,11 +1,11 @@
 <view class='addresswrap'>
 <view class='address'>
-  <view class='additem newaddress'>
+  <view class='additem newaddress' catchtap="goAddAddress">
     <view class='addtext'>
       <image class='addimg' src='/images/settlement_ic_location.png'></image>
       <view class='addresstext'>
-        <view>{{address}}</view>
-        <view class='conctic' wx:if="{{address && address!='新增收货地址'}}">林大作 18819012312</view>
+        <view>{{address.sendaddress}}{{address.bianhao}}</view>
+        <view class='conctic' wx:if="{{address && address!='新增收货地址'}}">{{address.chenghu}}{{address.sex == 1?"女士":"先生"}}</view>
        </view>
     </view>
      <image class='righticon' src='/images/righticon.png'></image>

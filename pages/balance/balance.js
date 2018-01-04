@@ -17,13 +17,12 @@ Page({
    */
   onLoad: function (options) {
     let product = JSON.parse(options.carsproduct).filter((product)=>product.num>0);
-    let address = wx.getStorageSync("address") ? wx.getStorageSync("address") : "新增收货地址";
-    console.log(product);
+    let address = wx.getStorageSync("address") ? JSON.parse(wx.getStorageSync("address")) : "新增收货地址";
+    console.log(address);
     this.setData({
       product,
       address
     });
-
 
     this.setData({
       allprice: this.computedprice()
@@ -35,8 +34,12 @@ Page({
     return this.data.product.reduce((price,product)=>{
       return price += parseFloat(product.price * product.num);
     }, (this.data.expressfee - this.data.discount))
-
-
+  },
+  //跳转到新增收货地址
+  goAddAddress(){
+    wx.navigateTo({
+      url: '/pages/addadress/addadress',
+    })
   },
 
 

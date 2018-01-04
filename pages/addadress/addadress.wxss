@@ -1,0 +1,12 @@
+/* pages/addadress/addadress.wxss */
+page{background-color:#f3f3f3}
+.itemwap{padding-left:20rpx;background-color: #fff;}
+.itemwap .adsitem:last-child{border-bottom-color:#fff}
+.title{padding-left:20rpx; line-height: 55rpx; height: 55rpx; margin-top:15rpx;font-size:32rpx;}
+.adsitem{ height: 94rpx; display: flex;  line-height: 94rpx; border-bottom:1px solid #e3e3e3; font-size:32rpx;}
+.adsitem label{ color: #999;}
+.adsitem input{ color: #333333; height: 94rpx; line-height: 94rpx}
+
+.addss_3_wrap .sexradio{margin-left:80rpx;}
+.addss_3_wrap .sexradio .radio{margin-right:40rpx; color: #333333}
+.save[type="primary"]{margin:50rpx; background-color:#ff900c}

@@ -1,10 +1,11 @@
 {
   "pages":[
+ 
     "pages/shop/shop",
     "pages/order/order",
     "pages/mine/mine",
-    "pages/balance/balance"    
-
+    "pages/balance/balance",
+    "pages/addadress/addadress"
   ],
   "tabBar": {
     "color": "#333",

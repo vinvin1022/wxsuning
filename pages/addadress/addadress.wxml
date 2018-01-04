@@ -1,0 +1,51 @@
+<form bindsubmit="submit">
+<view class='addss_1_wrap'>
+  <view class='title'>Moe宅店铺</view>
+  <view class='itemwap'>
+  <view class='adsitem'>
+    <label>送货店铺：</label>
+    <input type='text' name="dianpu" value='{{dianpu}}' placeholder='输入送货店铺' bindinput="dianpuinput"></input>
+  </view>
+  <view class='adsitem'>
+    <label>配送范围：</label>
+    <input type='text'  name="fanwei" value='{{fanwei}}'   placeholder='输入配送范围'bindinput="fanweiinput"></input>
+  </view>
+  </view>
+</view>
+<view class='addss_2_wrap'>
+  <view class='title'>送货地址：</view>
+  <view class='itemwap'>
+  <view class='adsitem'>
+    <label>园区/小区：</label>
+    <input type='text' value='{{sendaddress}}'  placeholder='小区' name="sendaddress" bindinput="sendaddressinput"></input>
+  </view>
+  <view class='adsitem'>
+    <label>楼号-编号：</label>
+    <input type='text' value='{{bianhao}}'  placeholder='楼号' name="bianhao" bindinput="bianhaoinput"></input>
+  </view>
+  </view>
+</view>
+<view class='addss_3_wrap'>
+  <view class='title'>联系人</view>
+  <view class='itemwap'>
+  <view class='adsitem'>
+    <label>称呼：</label>
+    <input type='text' name="chenghu" value='{{chenghu}}' bindinput="chenghuinput"></input>
+  </view>
+   <view class='adsitem sexradio'>
+   
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{sexs}}">
+        <radio color="#ff900c" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class='adsitem'>
+    <label>电话：</label>
+    <input type='number'  name="phone" value='{{phone}}' bindinput="phoneinput"></input>
+  </view>
+  </view>
+</view>
+
+<button type='primary' class='save' catchtap='save'>保存</button>
+</form>
