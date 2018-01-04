@@ -8,22 +8,26 @@ Page({
     product:[],
     allprice:0,
     discount:10,
-    expressfee:0
+    expressfee:0,
+    address: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let product = JSON.parse(options.carsproduct).filter((product)=>product.num>0)
+    let product = JSON.parse(options.carsproduct).filter((product)=>product.num>0);
+    let address = wx.getStorageSync("address") ? wx.getStorageSync("address") : "新增收货地址";
     console.log(product);
     this.setData({
-      product
+      product,
+      address
     });
+
+
     this.setData({
       allprice: this.computedprice()
     })
-
   },
 
 

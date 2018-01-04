@@ -4,8 +4,8 @@
     <view class='addtext'>
       <image class='addimg' src='/images/settlement_ic_location.png'></image>
       <view class='addresstext'>
-        <view>新增收货地址</view>
-        <view class='conctic'>林大作 哈哈哈哈</view>
+        <view>{{address}}</view>
+        <view class='conctic' wx:if="{{address && address!='新增收货地址'}}">林大作 18819012312</view>
        </view>
     </view>
      <image class='righticon' src='/images/righticon.png'></image>
