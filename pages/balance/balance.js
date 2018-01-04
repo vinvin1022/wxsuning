@@ -17,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     let product = JSON.parse(options.carsproduct).filter((product)=>product.num>0);
-    let address = wx.getStorageSync("address") ? JSON.parse(wx.getStorageSync("address")) : "新增收货地址";
+    let address = JSON.parse(wx.getStorageSync("address"));
     console.log(address);
     this.setData({
       product,

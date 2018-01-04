@@ -6,8 +6,8 @@ Page({
    */
   data: {
     sexs: [
-      { name: '0', value: '先生',checked: false},
-      { name: '1', value: '女士', checked: true }
+      { name: '0', value: '先生', checked: true},
+      { name: '1', value: '女士', checked: false }
     ],
     dianpu:"",
     fanwei:"",
@@ -15,7 +15,7 @@ Page({
     bianhao:"",
     chenghu:"",
     phone:"",
-    sex:""
+    sex:0
 
 
   },
@@ -111,7 +111,7 @@ Page({
       bianhao: data.bianhao,
       chenghu: data.chenghu,
       phone: data.phone,
-      sex: data.sex,
+      sex: data.sex || 0,
       sexs: _this.data.sexs
     })
 
