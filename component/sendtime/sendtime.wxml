@@ -1,0 +1,29 @@
+<!--component/sendtime/sendtime.wxml-->
+<view class='sendtime'>
+  <view class='timepop' animation="{{animationsendtime}}" catchtap='hideSendTime'></view>
+  <view class='timecontent' animation="{{animationsendtime}}">
+    <view class='timect'>
+      <view class='cleft'>
+        <view class='leftcont'>
+          今天（{{day}}）
+        </view>
+      </view>
+      <view class='cright'>
+        <scroll-view scroll-into-view="aaa" bindscroll="scrolltime" enable-back-to-top scroll-with-animation scroll-y style="height: 400rpx;">
+          <block wx:for="{{sendtime}}">
+            <view class='item {{index==selected ? "active" : ""}}'  data-index="{{index}}" data-sendtime="{{item}}" catchtap='_selectTime'>
+              <view class='st'>
+              {{item.hours}}<text wx:if="{{item.hours=='' && item.minutes==''}}">立即</text>
+              <text wx:else>:</text>{{item.minutes}}送出</view>
+              <view class='moneny'>￥0.0 配送费</view>
+            </view>
+          </block>
+          
+       
+        </scroll-view>
+      </view>
+    </view>
+    <view class='cancle' catchtap='hideSendTime'>取消</view>
+  </view>
+
+</view>

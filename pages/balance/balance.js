@@ -9,7 +9,9 @@ Page({
     allprice: 0,
     discount: 10,
     expressfee: 0,
-    address: ""
+    address: "",
+    hours:"",
+    minutes:""
   },
 
   /**
@@ -42,13 +44,25 @@ Page({
     })
   },
 
+  showsendtime(){
+    this.sendtime.showSendTime();
+  },
+  selectTime(ev){
+    console.log(ev.detail)
+    this.setData({
+      hours: ev.detail.hours,
+      minutes: ev.detail.minutes
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function (options) {
     console.log("onReady")
-
+    this.sendtime = this.selectComponent("#sendtime");
+    console.log(this.sendtime);
   },
 
   /**

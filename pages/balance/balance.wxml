@@ -12,10 +12,11 @@
      <image class='righticon' src='/images/righticon.png'></image>
   </view>
 
-  <view class='additem send'>
+  <view class='additem send' catchtap='showsendtime'>
     <view class='addtext'>
       <image class='addimg' src='/images/settlement_ic_time.png'></image>
-      <text>立即发送</text>
+      <text wx:if="{{!hours}}">立即发送</text>
+      <text wx:if="{{hours}}">今日{{hours}}:{{minutes}}发送</text>
     </view>
      <image class='righticon' src='/images/righticon.png'></image>
   </view>
@@ -60,7 +61,9 @@
   </view>
    </scroll-view>
 </view>
-
+<sendtime id="sendtime" bindselectTime="selectTime"></sendtime>
 <view class="paysend">
   <button type="primary"><image src='/images/logo_wechat.png'></image>微信支付 ￥{{allprice}}</button>
 </view>
+
+

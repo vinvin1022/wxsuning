@@ -1,5 +1,5 @@
 /* pages/balance/balance.wxss */
-page{background-color: #f3f3f3}
+page{background-color: #f3f3f3; height: 1205rpx; overflow: hidden}
 
 .address{padding-left:24rpx; background-color:#fff; margin-bottom:25rpx;}
 .righticon{width:12rpx; height: 24rpx;}

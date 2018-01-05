@@ -1,0 +1,10 @@
+/* component/sendtime/sendtime.wxss */
+.timepop{position: fixed;width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); bottom: -1205rpx; left: 0; z-index: 10}
+.timecontent{ position: absolute;  bottom: -1205rpx; left: 0; z-index: 12; }
+.timect{display: flex;width: 100%; background-color: #fff}
+.timecontent .cleft{ width: 240rpx;background-color: #f3f3f3 ; }
+.timecontent .cleft .leftcont{height:100rpx; line-height: 100rpx;background-color: #fff ; text-align: center}
+.timecontent .cright{background-color: #fff;}
+.timecontent .cright .item{display: flex; height: 100rpx; line-height:100rpx; justify-content: space-around; width: 470rpx; padding: 0 20rpx;}
+.timecontent .cright .active{color:#ff900c}
+.cancle{height: 88rpx; background-color: #fff;border-top:1px solid #e5e5e5; text-align: center; line-height: 88rpx;}
