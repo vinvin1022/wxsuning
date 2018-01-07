@@ -1,0 +1,30 @@
+<!--component/orderlist/orderlist.wxml-->
+<view class='orderlist'>
+  <view class='disflex fs36 statustime'>
+    <view class='time'>{{orderinfo.datetime}}</view>
+    <view class='status'>
+      <text wx:if="{{orderinfo.status==0}}">订单已完成</text>
+      <text wx:elif="{{orderinfo.status==1}}">订单进行中</text>
+      <text wx:else>订单已取消</text>
+    </view>
+  </view>
+  <view class="orderall">
+    <view class='disflex fs32 orderitem' wx:for="{{orderinfo.productlist}}" wx:key="pk">
+      <view class='name'>
+        {{item.title}} ￥{{item.price}}
+      </view>
+      <view class='num'>
+        x{{item.num}}
+      </view>
+    </view>
+  </view>
+
+  <view class='fs32 productnum'>
+    共{{orderinfo.allcounter}}件商品实付<text>￥{{orderinfo.allprice}}元</text>
+  </view>
+  <view class="butns">
+    <button class='fs36 {{orderinfo.status==0 ? "againbtn" : ""}}' size='mini' plain wx:if="{{orderinfo.status==0}}" catchtap='againdownorder'>再来一单</button>
+    <button class='fs36' size='mini' plain wx:if="{{orderinfo.status==1}}"  catchtap='cancleorder'>取消订单</button>
+    <button class='fs36 {{orderinfo.status==2 ? "againbtn" : ""}}' size='mini' plain wx:if="{{orderinfo.status==2}}" catchtap='againdownorder'>重新下单</button>
+  </view>
+</view>

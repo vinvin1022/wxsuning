@@ -1,1 +1,33 @@
-<text>个人中心开发当中 尽请期待....</text>
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="imgkey">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+    </block>
+</swiper>
+<view class='list'>
+  <navigator hover-class='none' class='item' url='/pages/favourable/favourable'>
+      <view class='left'>
+          <image src="/images/mine_ic_offer.png"></image>
+          <text>宅优惠</text>
+      </view>
+      <image src="/images/righticon.png"></image>
+  </navigator>
+  <view  class='item' catchtap='showproductpop'>
+      <view class='left'>
+          <image src="/images/mine_ic_expect.png"></image>
+          <text>期待商品</text>
+      </view>
+      <image src="/images/righticon.png"></image>
+  </view>
+
+  <view catchtap='showfeedbackpop' class='item'>
+      <view class='left'>
+          <image src="/images/mine_ic_opinion.png"></image>
+          <text>意见反馈</text>
+      </view>
+      <image src="/images/righticon.png"></image>
+  </view>
+</view>
+
+<feedbackcomp id="feedback" sendmsg="{{sendnei}}" bindquerentap="querenmsg"></feedbackcomp>

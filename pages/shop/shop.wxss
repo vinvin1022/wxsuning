@@ -8,13 +8,14 @@ page{background-color: #f3f3f3; position: relative;}
 
 .content{ position: relative; }
 .haveselected{padding-bottom: 100rpx;}
-.content .left{width: 200rpx; font-size: 32rpx; position: fixed; left: 0;top:86rpx;}
+.content .left{width: 200rpx; font-size: 32rpx;height: 1021rpx;overflow: auto; position: fixed; left: 0;top:82rpx;}
 .content .left .item{height: 94rpx; background-color: #f3f3f3; line-height: 94rpx;  padding-left: 20rpx;border-bottom: 1px solid #e3e3e3; position: relative;}
 .content .left .active{background-color: #fff;}
 .content .left .tips{ position: absolute; right:10rpx;top: 10rpx; width: 40rpx; height: 40rpx; text-align: center; line-height: 40rpx; color: #fff; font-size: 24rpx; border-radius: 50%; background-color: #ff900c}
-.content .right{width: 550rpx; height: 1015rpx; background-color: #fff; overflow: auto; position: absolute; left: 200rpx;top:86rpx;}
+.content .right{width: 550rpx; height: 1019rpx; background-color: #fff; overflow: auto; position: absolute; left: 200rpx;top:82rpx;}
 .content .alredy{height: 915rpx!important;overflow: auto;}
 .content .right .puditem{display: flex; flex-direction: row; height: 138rpx; padding: 34rpx 24rpx; background-color: #fff; border-bottom: 1px solid #e3e3e3}
+.content .right .puditem:last-child{border-bottom: none}
 .content .right .puditem image{width: 145rpx;height: 145rpx; margin-right: 15rpx}
 .content .right .puditem .price{ width: 342rpx; display: flex; justify-content: space-between;color: #ff390c; padding-top: 10rpx; font-size:35rpx;}
 .content .right .puditem .kzan{font-size: 24rpx; color: #999999; padding-top: 10rpx;}

@@ -10,7 +10,7 @@
       </view>
       <view class='cright'>
         <scroll-view scroll-into-view="aaa" bindscroll="scrolltime" enable-back-to-top scroll-with-animation scroll-y style="height: 400rpx;">
-          <block wx:for="{{sendtime}}">
+          <block wx:for="{{sendtime}}" wx:key="sk">
             <view class='item {{index==selected ? "active" : ""}}'  data-index="{{index}}" data-sendtime="{{item}}" catchtap='_selectTime'>
               <view class='st'>
               {{item.hours}}<text wx:if="{{item.hours=='' && item.minutes==''}}">立即</text>

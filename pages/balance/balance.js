@@ -19,8 +19,7 @@ Page({
    */
   onLoad: function (options) {
     let product = JSON.parse(options.carsproduct).filter((product) => product.num > 0);
-    let address = JSON.parse(wx.getStorageSync("address"));
-    console.log(address);
+    let address = wx.getStorageSync("address") ? JSON.parse(wx.getStorageSync("address")) : "";
     this.setData({
       product,
       address
@@ -29,6 +28,17 @@ Page({
     this.setData({
       allprice: this.computedprice()
     })
+  },
+  wxpay(e){
+    let app = getApp();
+    app.globalData.carsInfo = this.data.product;
+    console.log(app.globalData.carsInfo)
+    wx.showToast({
+      title: '支付成功',
+      icon:"success",
+      duration:2000
+    })
+
   },
 
 
@@ -60,7 +70,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function (options) {
-    console.log("onReady")
     this.sendtime = this.selectComponent("#sendtime");
     console.log(this.sendtime);
   },

@@ -184,9 +184,11 @@ Page({
   //下一步按钮
   nexttap(){
     let carsproduct = JSON.stringify(this.data.carsproduct);
-   wx.navigateTo({
-     url: '/pages/balance/balance?carsproduct=' + carsproduct,
-   })
+    wx.navigateTo({
+      url: '/pages/balance/balance?carsproduct=' + carsproduct,
+    })
+
+   
   },
 
   //打开详情页
@@ -196,7 +198,6 @@ Page({
     this.setData({
       productdetail: product,
       ispopShow:true
-
     })
 
 

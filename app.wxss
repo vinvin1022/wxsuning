@@ -1,4 +1,5 @@
 /**app.wxss**/
+page{background-color: #f3f3f3}
 .container {
   height: 100%;
   display: flex;
@@ -8,6 +9,7 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
 
 
 .commonbtns{display: flex; flex-direction: row; width: 150prx; padding: 0 0 30rpx 0; justify-content: flex-end}

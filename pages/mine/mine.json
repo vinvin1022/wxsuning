@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents":{
+    "feedbackcomp":"../../component/feedbackcomp/feedbackcomp"
+  }
+}

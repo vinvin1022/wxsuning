@@ -5,14 +5,17 @@
 
 <view class='content {{allPrice>0 ? "haveselected":""}}'>
   <view class='left'>
+    <!-- <scroll-view enable-back-to-top scroll-y class='cataryitemwrap'> -->
     <block wx:for="{{catagery}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
       <view class="item {{item.id == customid ? 'active':''}}" data-cid='{{item.id}}' bindtap='selectProduct'>
         <text>{{item.name}}</text>
         <text class='tips' wx:if="{{item.num}}">{{item.num}}</text>
       </view>
     </block>
+    <!-- </scroll-view> -->
   </view>
   <view class='right {{allPrice>0 ? "alredy" : ""}}'>
+  <!-- <scroll-view enable-back-to-top scroll-y class='itemwrap'> -->
      <block wx:for="{{products}}"  wx:key="pudidx" wx:for-index="pudidx" wx:for-item="puditem">
       <view class='puditem' wx:if='{{puditem.cid == customid}}' data-product='{{puditem}}'>
         <image  catchtap='godetail' data-product='{{puditem}}' src="{{puditem.imgurl}}"></image>
@@ -35,6 +38,7 @@
       </view>
     </block>
     <view class='puditem' wx:if='{{!hasproduct}}'>尽情期待，马上上架</view>
+    <!-- </scroll-view> -->
   </view>
  
 </view>

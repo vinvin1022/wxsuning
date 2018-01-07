@@ -1,0 +1,12 @@
+/* pages/favourable/favourable.wxss */
+.favourablelist{padding: 24rpx;}
+.itemwrap{position: relative; width: 702rpx; height: 174rpx; margin-bottom: 24rpx; }
+.itemwrap image{width: 702rpx; height: 174rpx;position: absolute;z-index: -1}
+.favourablelist .item{display: flex;font-size: 32rpx; justify-content: space-between; height: 174rpx; padding:27rpx;}
+.favourablelist .item .left {color: #989898;line-height: 50rpx;}
+.favourablelist .item .left .redbao{color:#333333; line-height: 60rpx;}
+.favourablelist .item .right {color: #ff900c;line-height: 50rpx;}
+.favourablelist .item .right .money text{ font-size: 40rpx; line-height: 60rpx;}
+
+.nomore{text-align: center; color: #989898; font-size: 32rpx;}
+.dontno{ text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; height: 90rpx; line-height: 90rpx; border-top:1px solid #dcdcdc; background: #fff; color: #333333}

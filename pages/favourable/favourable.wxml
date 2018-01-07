@@ -1,0 +1,32 @@
+<!--pages/favourable/favourable.wxml-->
+
+
+<scroll-view class='favourablelist'>
+  <view class='itemwrap' wx:for="{{favourablelist}}" wx:key="fk">
+    <image src='/images/image_coupon.png'></image>
+    <view class='item'>
+      <view class='left'>
+        <view class='redbao'>{{item.type}}</view>
+        <view>有效期于{{item.overtime}}</view>
+      </view>
+      <view class='right'>
+        <view class='money'>
+          ￥<text>{{item.money}}</text>
+        </view>
+        <view class='how'>
+        满{{item.how}}可用
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<view class='nomore' wx:if="{{favourablelist.length==0}}">
+-没有更多的宅优惠了-
+</view>
+<view class='dontno' wx:if="{{favourablelist.length>0}}">
+  不是用宅优惠
+</view>
+
+

@@ -1,0 +1,14 @@
+/* component/orderlist/orderlist.wxss */
+
+.disflex{display: flex}
+.fs36{font-size: 36rpx!important;}
+.fs32{font-size: 32rpx;}
+.orderlist{background-color: #fff; padding-left: 24rpx; margin-top:32rpx;}
+.orderlist .statustime{justify-content:space-between; height: 86rpx; line-height: 86rpx; padding-right:24rpx; }
+.orderlist .orderall{padding-right:24rpx;}
+.orderlist .orderitem{justify-content: space-between; color: #989898;line-height: 60rpx; height: 60rpx;}
+.orderlist .productnum{padding-right:24rpx; text-align: right; border-bottom:1px solid #e3e3e3; height: 70rpx; line-height: 70rpx; color: #989898 }
+.orderlist .productnum text{color: #333333}
+.orderlist .butns{display: flex;justify-content: flex-end; padding-right: 24rpx;}
+.orderlist .butns button{margin: 20rpx 0; border-color: #e3e3e3; color:#989898}
+.orderlist .butns button.againbtn{border-color: #ff900c; color:#ff900c}

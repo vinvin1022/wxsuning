@@ -1,6 +1,6 @@
 /* component/sendtime/sendtime.wxss */
 .timepop{position: fixed;width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); bottom: -1205rpx; left: 0; z-index: 10}
-.timecontent{ position: absolute;  bottom: -1205rpx; left: 0; z-index: 12; }
+.timecontent{ position: absolute; width: 100%;  bottom: -1205rpx; left: 0; z-index: 12; }
 .timect{display: flex;width: 100%; background-color: #fff}
 .timecontent .cleft{ width: 240rpx;background-color: #f3f3f3 ; }
 .timecontent .cleft .leftcont{height:100rpx; line-height: 100rpx;background-color: #fff ; text-align: center}

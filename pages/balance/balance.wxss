@@ -1,6 +1,6 @@
 /* pages/balance/balance.wxss */
-page{background-color: #f3f3f3; height: 1205rpx; overflow: hidden}
-
+page{background-color: #f3f3f3; }
+.addresswrap{height: 100vh; overflow: hidden; position: relative}
 .address{padding-left:24rpx; background-color:#fff; margin-bottom:25rpx;}
 .righticon{width:12rpx; height: 24rpx;}
 .address .additem{ display: flex; justify-content: space-between; align-items: center; padding: 0 20rpx 0 40rpx; font-size:36rpx;}

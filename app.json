@@ -1,11 +1,13 @@
 {
   "pages":[
- 
     "pages/shop/shop",
-    "pages/order/order",
     "pages/mine/mine",
+    "pages/order/order",
+   
     "pages/balance/balance",
-    "pages/addadress/addadress"
+    "pages/addadress/addadress",
+    "pages/favourable/favourable"
+    
   ],
   "tabBar": {
     "color": "#333",
@@ -31,6 +33,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTextStyle":"#fff",
-    "navigationBarTitleText":"中粮商务公园店"
+    "navigationBarTitleText":"中粮商务公园店",
+    "backgroundColor": "#000"
   }
 }

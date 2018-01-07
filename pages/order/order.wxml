@@ -1,2 +1,16 @@
 <!--pages/order/order.wxml-->
-<text>历史订单开发当中 尽请期待....</text>
+
+    <scroll-view class='scrollview' scroll-into-view="{{intoview}}" upper-threshold="200" scroll-with-animation scroll-y enable-back-to-top bindscrolltoupper="upscroll" bindscrolltolower="downscroll">
+    <block wx:for="{{orderinfolist}}" wx:key="okey">
+      <orderlist id="a{{index}}" orderinfo="{{item}}"></orderlist>
+    </block>
+  </scroll-view>  
+
+<!-- <view>
+  <block wx:for="{{orderinfolist}}" wx:key="okey">
+    <orderlist orderinfo="{{item}}"></orderlist>
+  </block>
+</view> -->
+
+
+
